@@ -1,0 +1,6 @@
+GET /questions
+
+PUT    /post
+GET    /post/<id>
+POST   /post/<id>
+DELETE /post/<id>

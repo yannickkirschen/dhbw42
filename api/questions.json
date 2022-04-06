@@ -1,0 +1,13 @@
+{
+    "data": {
+        "questions": [
+            {
+                "id": "hash",
+                "title": "",
+                "creator": "",
+                "answerCount": 0,
+                "dateCreated": "ISO 8601"
+            }
+        ]
+    }
+}

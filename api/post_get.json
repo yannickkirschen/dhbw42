@@ -1,0 +1,17 @@
+{
+    "data": {
+        "id": "hash",
+        "parent": "hash (or null)",
+        "children": ["hash"],
+        "title": "",
+        "creator": "",
+        "content": "",
+        "reactions": [
+            {
+                "unicodeChar": "",
+                "amount": 0
+            }
+        ],
+        "dateCreated": "ISO 8601"
+    }
+}
