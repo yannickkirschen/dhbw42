@@ -1,0 +1,17 @@
+spring:
+    datasource:
+        driverClassName: org.sqlite.JDBC
+        url: 'jdbc:sqlite::memory:'
+        username: sa
+        password: sa
+
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+                hbm2ddl:
+                    auto: create-drop
+                show_sql: false
+
+server:
+    port: 8000
