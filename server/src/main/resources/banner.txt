@@ -1,0 +1,2 @@
+DHBW42 - Server
+v${project.version}

@@ -133,6 +133,17 @@
     <build>
         <finalName>app</finalName>
 
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+
+            <resource>
+                <directory>../api</directory>
+            </resource>
+        </resources>
+
         <plugins>
             <!-- Need at least 2.22.0 to support JUnit 5 -->
             <plugin>
@@ -147,12 +158,14 @@
                 <version>${openapi.generator.plugin.version}</version>
                 <executions>
                     <execution>
+                        <id>API generation</id>
+
                         <goals>
                             <goal>generate</goal>
                         </goals>
 
                         <configuration>
-                            <inputSpec>${project.basedir}/src/main/resources/static/openapi.yml</inputSpec>
+                            <inputSpec>${project.basedir}/../api/openapi.yml</inputSpec>
                             <generatorName>spring</generatorName>
                             <library>spring-boot</library>
                             <generateApiTests>false</generateApiTests>
