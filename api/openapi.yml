@@ -131,23 +131,23 @@ components:
             properties:
                 id:
                     type: string
-                    description: The ID of the post.
-                    example: a7ej8dl0
+                    description: The UUID of the post.
+                    example: 74a85b71-6cf3-4e52-80a8-b6e313cd6ab0
 
                 parent:
                     type: string
-                    description: If the post has a parent post, this will be its ID. If not, this will be null.
-                    example: slK9abnL
+                    description: If the post has a parent post, this will be its UUID. If not, this will be null.
+                    example: d9f4adb1-44fc-4847-b8bf-5d03eb989b95
 
                 children:
                     type: array
                     example:
-                        - s3dnHJ3s
-                        - pe94jHuz
+                        - 65becd52-18ca-4fbe-8096-449c74176428
+                        - ed6db1c8-eef4-4b5a-beb1-dcb9491bd397
 
                     items:
                         type: string
-                        description: If the post has child posts, this will contain all second-level IDs of those posts.
+                        description: If the post has child posts, this will contain all second-level UUIDs of those posts.
 
                 title:
                     type: string
@@ -207,7 +207,7 @@ components:
 
         PostId:
             type: object
-            description: The ID of a post.
+            description: The UUID of a post.
 
             required:
                 - id
@@ -215,8 +215,8 @@ components:
             properties:
                 id:
                     type: string
-                    description: The ID of the post.
-                    example: a7ej8dl0
+                    description: The UUID of the post.
+                    example: 74a85b71-6cf3-4e52-80a8-b6e313cd6ab0
 
         PostUpdate:
             type: object
@@ -306,8 +306,8 @@ components:
             properties:
                 id:
                     type: string
-                    description: The ID of the question/post.
-                    example: a7ej8dl0
+                    description: The UUID of the question/post.
+                    example: 74a85b71-6cf3-4e52-80a8-b6e313cd6ab0
 
                 title:
                     type: string
