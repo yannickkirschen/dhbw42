@@ -28,9 +28,9 @@ public class Post {
     @Column(name = "CONTENT")
     private String content;
 
-    @OneToMany(targetEntity = Reaction.class)
     @ToString.Exclude
-    private List<Reaction> reactions;
+    @OneToMany(targetEntity = Reaction.class, fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Reaction> reactions = new ArrayList<>();
 
     @Column(name = "DATE_CREATED", nullable = false, updatable = false)
     private LocalDate dateCreated;

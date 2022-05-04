@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Entity(name = "USERS")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(name = "ID", nullable = false, updatable = false, unique = true)
     private Integer id;
 
@@ -19,5 +19,5 @@ public class User {
 
     @Column(name = "ROLE")
     @Enumerated(EnumType.STRING)
-    private Role role;
+    private Role role = Role.ANONYMOUS;
 }
