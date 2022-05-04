@@ -4,6 +4,7 @@ import org.springdoc.core.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.servlet.config.annotation.*;
 
 @SpringBootApplication
 public class Main {
@@ -19,5 +20,15 @@ public class Main {
     @Bean
     public SpringDocConfigProperties springDocConfigProperties() {
         return new SpringDocConfigProperties();
+    }
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("*").allowedMethods("*");
+            }
+        };
     }
 }
