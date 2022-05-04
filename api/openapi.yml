@@ -27,27 +27,7 @@ paths:
                             schema:
                                 $ref: '#/components/schemas/QuestionsResponse'
 
-    /post/{id}:
-        parameters:
-            -   in: path
-                name: id
-                schema:
-                    type: string
-                required: true
-                description: ID of the post to get.
-
-        get:
-            summary: Retrieve a single post by its ID.
-            operationId: getPost
-
-            responses:
-                '200':
-                    description: Returns the post.
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/PostResponse'
-
+    /post:
         put:
             summary: Create a post.
             operationId: createPost
@@ -68,6 +48,27 @@ paths:
                         application/json:
                             schema:
                                 $ref: '#/components/schemas/PostIdResponse'
+
+    /post/{id}:
+        parameters:
+            -   in: path
+                name: id
+                schema:
+                    type: string
+                required: true
+                description: ID of the post to get.
+
+        get:
+            summary: Retrieve a single post by its ID.
+            operationId: getPost
+
+            responses:
+                '200':
+                    description: Returns the post.
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/PostResponse'
 
         post:
             summary: Update an existing post.
@@ -147,7 +148,7 @@ components:
 
                     items:
                         type: string
-                        description: If the post has child posts, this will contain all second-level UUIDs of those posts.
+                        description: If the post has child postRepository, this will contain all second-level UUIDs of those postRepository.
 
                 title:
                     type: string
