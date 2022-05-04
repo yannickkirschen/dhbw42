@@ -10,7 +10,7 @@ info:
         email: yannickkirschen@protonmail.com
 
 servers:
-    -   url: 'http://localhost:8000'
+    -   url: 'http://localhost:8000/v1'
         description: dev
 
 paths:
